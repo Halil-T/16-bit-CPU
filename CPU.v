@@ -177,6 +177,8 @@ module CPU();
         #100
         pc = -1;
         #100
+        $dumpfile("test.vcd");
+        $dumpvars(0, clk, instruction, bus);
         $monitor("fib=%d",Rx[4]);
         
     end
