@@ -121,7 +121,7 @@ module CPU();
                 Rx[Rd] = bus;
                 en_alu = 1'b0;
             end
-            4'hc:begin
+            4'hc:begin      //BEQ (to immediate)
                 if(Rx[Rn] == Rm) begin
                     pc = pc + Rd-1;
                 end
@@ -157,10 +157,6 @@ module CPU();
         pc = pc + 1;
         #10
         instruction = tmp_mem;
-        /*if(pc == 'hf) begin
-            $finish;
-        end
-        */
     end
 
     always #500 clk = ~clk;
