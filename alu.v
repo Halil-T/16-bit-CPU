@@ -1,8 +1,8 @@
 module alu(
-           input [15:0] A,B,  // ALU 8-bit Inputs                 
+           input [15:0] A,B,  // ALU 16-bit Inputs                 
            input [2:0] ALU_Sel,// ALU Selection
            input shamt,
-           output [15:0] ALU_Out, // ALU 8-bit Output
+           output [15:0] ALU_Out, // ALU 16-bit Output
            output CarryOut // Carry Out Flag
     );
     reg [15:0] ALU_Result;

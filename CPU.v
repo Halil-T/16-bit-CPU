@@ -129,7 +129,7 @@ module CPU();
             4'hd:begin      //branch
                 pc = pc - Rd-1;
             end
-            4'he:begin      //STUR
+            4'he:begin      //STUR because of the way the registers were implemented, I have to get them onto the bus using the alu
                 addr = Rd;
                 A <= 0;
                 B <= Rx[Rn];

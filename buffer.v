@@ -6,7 +6,7 @@ module buffer(input [15:0] in,
         if(en)
             out <= in;
         else
-            out <= 16'bzzzzzzzzzzzzzzzz;
+            out <= 16'bzzzzzzzzzzzzzzzz; // high impedence output to not interfere with bus
     end
 
 endmodule
