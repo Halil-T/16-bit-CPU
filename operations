@@ -1,0 +1,21 @@
+0 ADD
+1 ADDI
+2 SUB
+3 SUBI
+4 AND
+5 OR
+6 XOR
+7 NOR
+8 NAND
+9 finish
+a LSL
+b BEQ
+c branch with link
+d branch
+e stur
+f ldur
+
+R type opcode(4) Rd Rn Rm
+I type opcode(4) Rd Rn Imm
+D type opcode(4) addr Rd xxxx
+J type opcode(4) pcinc 
