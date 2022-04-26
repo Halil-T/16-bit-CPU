@@ -8,11 +8,12 @@ module CPU();
     reg [2:0] alu_sel;
     wire [15:0] bus;
     wire carryFlag;
-    reg en_alu, en_imem, shamt;
+    reg en_alu, en_imem;
     wire [3:0] Rn, Rd, Rm, opcode;
+    wire [7:0] branchLocation;
     reg clk;
     reg we, oe;
-    reg [3:0] addr;
+    reg [3:0] addr, shamt;
     reg [3:0] a, pc;
     integer i;
 
@@ -20,6 +21,8 @@ module CPU();
     assign Rd = instruction[11:8];
     assign Rn = instruction[7:4];
     assign Rm = instruction[3:0];
+    assign branchLocation = instruction[11:4];
+
 
     wire [15:0] tmp_alu, tmp_mem;
     alu aluop(.A(A), .B(B), .ALU_Out(tmp_alu), .ALU_Sel(alu_sel), .CarryOut(carryFlag), .shamt(shamt));
@@ -93,14 +96,8 @@ module CPU();
                 Rx[Rd] = bus;
                 en_alu = 1'b0;
             end
-            4'h7:begin      //NOR
-                A <= Rx[Rn];
-                B <= Rx[Rm];
-                alu_sel = 3'b101;
-                en_alu = 1'b1;
-                #1
-                Rx[Rd] = bus;
-                en_alu = 1'b0;
+            4'h7:begin      //Display
+                $display("%d", Rx[Rd]);
             end
             4'h8:begin      //NAND
                 A <= Rx[Rn];
@@ -123,15 +120,15 @@ module CPU();
             end
             4'hb:begin      //BL
                 Rx[15] = pc + 1;
-                pc = Rd-1;
+                pc = Rx[Rd]-1;
             end
             4'hc:begin      //BEQ (to immediate)
                 if(Rx[Rn] == Rm) begin
-                    pc = Rd-1;
+                    pc = Rx[Rd]-1;
                 end
             end
-            4'hd:begin      //branch
-                pc = Rx[Rd];
+            4'hd:begin      //branch to register
+                pc = Rx[Rd]-1;
             end
             4'he:begin      //STUR because of the way the registers were implemented, I have to get them onto the bus using the alu
                 addr = Rd;
@@ -174,12 +171,11 @@ module CPU();
             Rx[i] = 0;
         end
         i = 0;
-        #100
         pc = -1;
         #100
         $dumpfile("test.vcd");
         $dumpvars(0, clk, instruction, bus);
-        $monitor("fib=%d",Rx[1]);
+        //$monitor("fib=%d",Rx[10]);
         
     end
 endmodule

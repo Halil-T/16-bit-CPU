@@ -5,13 +5,13 @@
 4 AND
 5 OR
 6 XOR
-7 NOR
+7 Display
 8 NAND
 9 finish
 a LSL
 b BEQ
 c branch with link
-d branch
+d branch to register
 e stur
 f ldur
 
@@ -19,3 +19,6 @@ R type opcode(4) Rd Rn Rm
 I type opcode(4) Rd Rn Imm
 D type opcode(4) addr Rd xxxx
 J type opcode(4) pcinc 
+
+R15 = Link register
+R14 = Zero register
