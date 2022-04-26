@@ -3,7 +3,7 @@ module CPU();
     //instruction 15-12 11-8 7-4 3-0
 
     reg [15:0] instruction, C;
-    reg [15:0] A, B;
+    reg [15:0] A, B, zero;
     reg [15:0] Rx [15:0];
     reg [2:0] alu_sel;
     wire [15:0] bus;
@@ -121,13 +121,17 @@ module CPU();
                 Rx[Rd] = bus;
                 en_alu = 1'b0;
             end
+            4'hb:begin      //BL
+                Rx[15] = pc + 1;
+                pc = Rd-1;
+            end
             4'hc:begin      //BEQ (to immediate)
                 if(Rx[Rn] == Rm) begin
-                    pc = pc + Rd-1;
+                    pc = Rd-1;
                 end
             end
             4'hd:begin      //branch
-                pc = pc - Rd-1;
+                pc = Rx[Rd];
             end
             4'he:begin      //STUR because of the way the registers were implemented, I have to get them onto the bus using the alu
                 addr = Rd;
@@ -165,7 +169,7 @@ module CPU();
 
     initial begin
         clk = 0;
-        {we, oe, en_alu, addr, a, en_imem} <= 0;
+        {we, oe, en_alu, addr, a, en_imem, zero} <= 0;
         for(i = 0; i < 16; i = i+1) begin
             Rx[i] = 0;
         end
@@ -175,7 +179,7 @@ module CPU();
         #100
         $dumpfile("test.vcd");
         $dumpvars(0, clk, instruction, bus);
-        $monitor("fib=%d",Rx[4]);
+        $monitor("fib=%d",Rx[1]);
         
     end
 endmodule
