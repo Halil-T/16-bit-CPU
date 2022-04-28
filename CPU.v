@@ -170,7 +170,7 @@ module CPU();
         pc = -1;
         #100
         $dumpfile("test.vcd");
-        $dumpvars(0, clk, instruction, bus, tmp_alu, Rx[0]);
+        $dumpvars(0, clk, instruction, bus, tmp_alu, Rx[0], Rx[1], Rx[2], Rx[3]);
         //$monitor("%d",Rx[1]);
         
     end

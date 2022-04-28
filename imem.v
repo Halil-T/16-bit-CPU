@@ -4,8 +4,8 @@ module IMem(
 
     reg [15:0] ram [0:31];
 
-    //initial $readmemh("fibb_iter.txt", ram); // load file with instructions onto memory
-    initial $readmemh("I-type_test.txt", ram);
+    initial $readmemh("fibb_iter.txt", ram); // load file with instructions onto memory
+    //initial $readmemh("I-type_test.txt", ram);
 
     assign data = ram[a];
 
