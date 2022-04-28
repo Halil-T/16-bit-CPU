@@ -1,3 +1,4 @@
+`timescale 1ns/1ps
 module CPU();
 
     //instruction 15-12 11-8 7-4 3-0
@@ -155,7 +156,7 @@ module CPU();
         instruction = ins_bus;
     end
 
-    always #500 clk = ~clk;
+    always #50 clk = ~clk;
 
     //instruction opcode, rd, rn, rm
 
@@ -169,7 +170,7 @@ module CPU();
         pc = -1;
         #100
         $dumpfile("test.vcd");
-        $dumpvars(0, clk, instruction, bus);
+        $dumpvars(0, clk, instruction, bus, tmp_alu, Rx[0]);
         //$monitor("%d",Rx[1]);
         
     end
