@@ -8,7 +8,7 @@ module CPU();
     reg [2:0] alu_sel;
     reg [3:0] addr, shamt, a, pc;
     reg en_alu, en_imem, we, oe, clk;
-    wire [15:0] bus;
+    wire [15:0] bus, ins_bus;
     wire carryFlag;
     wire [3:0] Rn, Rd, Rm, opcode;
    
@@ -19,11 +19,11 @@ module CPU();
     assign Rn = instruction[7:4];
     assign Rm = instruction[3:0];
 
-    wire [15:0] tmp_alu, tmp_mem;
+    wire [15:0] tmp_alu;
     alu aluop(.A(A), .B(B), .ALU_Out(tmp_alu), .ALU_Sel(alu_sel), .CarryOut(carryFlag), .shamt(shamt));
     buffer aluBuff(.clk(clk), .en(en_alu), .in(tmp_alu), .out(bus));
     RAM data(.data(bus), .clk(clk), .we(we), .oe(oe), .addr(addr));
-    IMem mem(.a(pc), .data(tmp_mem));
+    IMem mem(.a(pc), .data(ins_bus));
     
     always@(posedge clk)
     begin
@@ -152,7 +152,7 @@ module CPU();
     begin
         pc = pc + 1;
         #10
-        instruction = tmp_mem;
+        instruction = ins_bus;
     end
 
     always #500 clk = ~clk;
