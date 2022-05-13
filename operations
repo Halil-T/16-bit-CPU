@@ -18,7 +18,7 @@ f ldur
 R type opcode(4) Rd Rn Rm
 I type opcode(4) Rd Rn Imm
 D type opcode(4) addr Rd xxxx
-J type opcode(4) pcinc 
+J type opcode(4) register with addr
 
 R15 = Link register
 R14 = Zero register
