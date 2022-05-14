@@ -12,10 +12,11 @@ For the Instruction Set Architecture, we implemented 16 operations, as can be se
 |--|--|--|--|
 |ADD |ADDI |STUR |Branch with link  |
 |SUB |SUBI |LDUR |Branch to register  |
-|AND | | | |
+|AND | | |BEQ |
 |OR | | | |
 |XOR||||
 |NAND||||
+|LSL|
 
 **Instruction Formats:**
 
@@ -27,7 +28,7 @@ For the Instruction Set Architecture, we implemented 16 operations, as can be se
 
 -J type: opcode(4) reg addr
 
-The ALU accepts and outputs 16 bit data, and processes commands to add and subtract, as well as logical and, or, nor, xor, nand, and lsl, as can be seen in [alu.v](https://github.com/Halil-T/16-bit-SingleCycle-CPU/blob/8a1f315729565a28dbdfaa9c44180b4b2302795d/alu.v).
+The ALU accepts and outputs 16 bit data, and processes the operations to add and subtract, as well as logical and, or, nor, xor, nand, and lsl, as can be seen in [alu.v](https://github.com/Halil-T/16-bit-SingleCycle-CPU/blob/8a1f315729565a28dbdfaa9c44180b4b2302795d/alu.v).
 
 # Design Decisions
 
