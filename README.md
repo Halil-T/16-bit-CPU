@@ -56,6 +56,25 @@ Path:
 **r-type Instruction Architecture Diagram**
 ![image](https://user-images.githubusercontent.com/100239942/168411315-a5a12db8-cdbc-4126-9306-f0ae6e38b80b.png)
 
+Path:
+
+-Instruction is fetched from the instruction memory and the PC is incremented.
+
+-Two registers are read from the register file and the main control unit computes the setting of the control lines.
+
+-The ALU operates on the data read from the two registers.
+
+-The ALU result is written into the destination register in the register file.
 
 **j-type Instruction Architecture Diagram**
 ![image](https://user-images.githubusercontent.com/100239942/168411828-e0c01868-7aff-437c-ac12-8857d19c8b97.png)
+
+Path:
+
+-Instruction is fetched from instruction memory and the pc is incremented.
+
+-A register value is read from the register file.
+
+-The ALU passes the data value from the register.
+
+-
