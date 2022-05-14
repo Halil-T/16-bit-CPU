@@ -39,7 +39,9 @@ The Buffer module in [buffer.v](https://github.com/Halil-T/16-bit-SingleCycle-CP
 |Metric     |Attributes    |
 |-----|-----|
 |16 |bit ALU Operands |
-| | |
+|16 |Registers |
+|16|bit address bus|
+|16 |bits for instruction|
 
 
 **Put Timing Diagrams Here**
