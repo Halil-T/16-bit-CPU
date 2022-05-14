@@ -41,6 +41,9 @@ The ALU accepts and outputs 16 bit data, and processe commands to add and subtra
 ![image](https://user-images.githubusercontent.com/100239942/168405058-5b7b6990-ce6e-47ab-bfb2-50241f3ff7df.png)
 
 
+**r-type Instruction Architecture Diagram**
+![image](https://user-images.githubusercontent.com/100239942/168411315-a5a12db8-cdbc-4126-9306-f0ae6e38b80b.png)
 
 
-
+**j-type Instruction Architecture Diagram**
+![image](https://user-images.githubusercontent.com/100239942/168411828-e0c01868-7aff-437c-ac12-8857d19c8b97.png)
