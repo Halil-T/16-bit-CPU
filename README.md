@@ -75,6 +75,6 @@ Path:
 
 -A register value is read from the register file.
 
--The ALU passes the data value from the register.
+-The ALU passes the data value from the register. The value of the pc is added to the sign-extended bits of the instruction (offset) and the offset is shifted left by two, resulting in branch address.
 
--
+-The Zero output status information from the ALU is used to decide which adder result to store in the PC.
