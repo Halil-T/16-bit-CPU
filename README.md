@@ -32,6 +32,8 @@ The ALU accepts and outputs 16 bit data, and processes the operations to add and
 
 An Instruction Memory module was created, as can be seen in [imem.v](https://github.com/Halil-T/16-bit-SingleCycle-CPU/blob/c05ec792e35b1f362a1120c0e4cf006f49e7682c/imem.v). The imem module loads a file with instructions for the computer into the memory of the computer, to the RAM module. The RAM module in [RAM.v](https://github.com/Halil-T/16-bit-SingleCycle-CPU/blob/8a1f315729565a28dbdfaa9c44180b4b2302795d/RAM.v) stores the data the computer is using.
 
+The Buffer modue in [buffer.v](https://github.com/Halil-T/16-bit-SingleCycle-CPU/blob/c05ec792e35b1f362a1120c0e4cf006f49e7682c/buffer.v) was used to help preserve data while it is being transferred between modules on the bus.
+
 # Design Decisions
 
 |Metric     |Attributes    |
