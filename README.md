@@ -28,7 +28,9 @@ For the Instruction Set Architecture, we implemented 16 operations, as can be se
 
 -J type: opcode(4) reg addr
 
-The ALU accepts and outputs 16 bit data, and processes the operations to add and subtract, as well as logical and, or, nor, xor, nand, and lsl, as can be seen in [alu.v](https://github.com/Halil-T/16-bit-SingleCycle-CPU/blob/8a1f315729565a28dbdfaa9c44180b4b2302795d/alu.v).
+The ALU accepts and outputs 16 bit data, and processes the operations to add and subtract, as well as logicaAl and, or, nor, xor, nand, and lsl, as can be seen in [alu.v](https://github.com/Halil-T/16-bit-SingleCycle-CPU/blob/8a1f315729565a28dbdfaa9c44180b4b2302795d/alu.v).
+
+An Instruction Memory module was created, as can be seen in [imem.v](https://github.com/Halil-T/16-bit-SingleCycle-CPU/blob/c05ec792e35b1f362a1120c0e4cf006f49e7682c/imem.v). The imem module loads a file with instructions for the computer into the memory of the computer, to the RAM module. The RAM module in [RAM.v](https://github.com/Halil-T/16-bit-SingleCycle-CPU/blob/8a1f315729565a28dbdfaa9c44180b4b2302795d/RAM.v)
 
 # Design Decisions
 
