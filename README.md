@@ -40,6 +40,18 @@ The ALU accepts and outputs 16 bit data, and processe commands to add and subtra
 **i-type Instruction Architecture Diagram**
 ![image](https://user-images.githubusercontent.com/100239942/168405058-5b7b6990-ce6e-47ab-bfb2-50241f3ff7df.png)
 
+Path:
+
+-Instruction is fetched from the instruction memory and the PC is incremented.
+
+-A register value is read from the register file.
+
+-The ALU computes the sum of the value from the register and the sign-extended bits (offset) of the instruction.
+
+-The sum calculated by the ALU is passed to the data memory and used as the address for the data memory.
+
+-The data from the memory unit is written into the register file.
+
 
 **r-type Instruction Architecture Diagram**
 ![image](https://user-images.githubusercontent.com/100239942/168411315-a5a12db8-cdbc-4126-9306-f0ae6e38b80b.png)
