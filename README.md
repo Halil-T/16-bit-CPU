@@ -37,7 +37,8 @@ The ALU accepts and outputs 16 bit data, and processe commands to add and subtra
 | | |
 
 
-
+**i-type Instruction Architecture Diagram**
+![image](https://user-images.githubusercontent.com/100239942/168405058-5b7b6990-ce6e-47ab-bfb2-50241f3ff7df.png)
 
 
 
