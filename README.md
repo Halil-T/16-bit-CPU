@@ -52,14 +52,26 @@ The Buffer module in [buffer.v](https://github.com/Halil-T/16-bit-SingleCycle-CP
 **i-type Instruction Timing Diagram**
 ![image](https://user-images.githubusercontent.com/100239942/168493167-f6529954-f247-475d-af4e-4df05b19b77f.png)
 
+To test this instruction type, R0 was added by R14 (zero register) and 3. It is then subtracted 2 again, and displayed.
+code can be found in [I-type-test.txt]
+
 **r-type Instruction Timing Diagram**
 ![image](https://user-images.githubusercontent.com/100239942/168493226-1e54a3da-58bb-4034-bdf8-f89d9874d194.png)
+
+To test this instruction type, two registers with values already stored have R1 is then shifted by 4 bits, and then it was subtraced by R0, then R1 was displayed.
+code can be found in [r-type-test.txt]
 
 **d-type Instruction Timing Diagram**
 ![image](https://user-images.githubusercontent.com/100239942/168493525-e64541a2-402b-4135-a2cc-95967e64dd0e.png)
 
+To test this instruction type, a value was put into R0 and stored in memory address 0. It was then loaded into R1 and displayed.
+code can be found in [D-type-test.txt]
+
 **j-type Instruction Timing Diagram**
 ![image](https://user-images.githubusercontent.com/100239942/168493607-2f9d9df7-6d22-452b-a7a0-4702c9c9385e.png)
+
+To test this instruction type, R0 is set to 0xF, and the branch address is set to 0xD. between the branch instruction and the display instruction R0 is being increased by one. When it is displayed it still output 0xF.
+code can be found in [J-type-test.txt]
 
 
 # **Architecture Diagrams**
