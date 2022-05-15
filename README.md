@@ -45,11 +45,15 @@ The Buffer module in [buffer.v](https://github.com/Halil-T/16-bit-SingleCycle-CP
 |16 |bits for instruction|
 
 
-**Timing Diagrams**
+# **Timing Diagrams**
 
 **i-type Instruction Timing Diagram**
 ![image](https://user-images.githubusercontent.com/100239942/168493167-f6529954-f247-475d-af4e-4df05b19b77f.png)
 
+**r-type Instruction Timing Diagram**
+![image](https://user-images.githubusercontent.com/100239942/168493226-1e54a3da-58bb-4034-bdf8-f89d9874d194.png)
+
+# **Architecture Diagrams**
 
 **i-type Instruction Architecture Diagram**
 ![image](https://user-images.githubusercontent.com/100239942/168492172-57f52f5e-0d07-4fe0-97e5-0ba14d0d689b.png)
