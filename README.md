@@ -20,21 +20,13 @@ For the Instruction Set Architecture, we implemented 16 operations, as can be se
 
 **Instruction Formats:**
 
+| |opcode |Rd | Rn| Rm |
+|- |- |- |- |- |
 |R |opcode |Rd | Rn| Rm |
-|- |- |- |- |- |
-|  | bit size | bit size  |  bit size | bit size  |
-
 |I |opcode |Rd | Rn| Imm |
-|- |- |- |- |- |
-|  | bit size | bit size  |  bit size | bit size  |
-
 |D |opcode |Addr | Rd| xxxx |
-|- |- |- |- |- |
-|  | bit size | bit size  |  bit size | bit size  |
-
 |J |opcode |Register with Addr | 
-|- |- |- |
-|  | bit size | bit size  |  
+
 
 
 -R type: opcode(4) Rd Rn Rm
