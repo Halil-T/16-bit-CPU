@@ -6,38 +6,38 @@
 
 # **Instruction Set Architecture**
 
--Halil Turan ()
+-Halil Turan (65%)
 
--Darren Chau ()
+-Darren Chau (35%)
 
 # **CPU Implementation**
 
 **Memory**
 
--Halil Turan ()
+-Halil Turan (75%)
 
--Darren Chau ()
+-Darren Chau (25%)
 
 **ALU**
 
--Halil Turan ()
+-Halil Turan (70%)
 
--Darren Chau ()
+-Darren Chau (30%)
 
 **Datapath**
 
--Halil Turan ()
+-Halil Turan (75%)
 
--Darren Chau ()
+-Darren Chau (25%)
 
 **Controller**
 
--Halil Turan ()
+-Halil Turan (85%)
 
--Darren Chau ()
+-Darren Chau (15%)
 
 # **Project Report**
 
--Halil Turan ()
+-Halil Turan (15%)
 
--Darren Chau ()
+-Darren Chau (85%)
