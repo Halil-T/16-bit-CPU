@@ -65,7 +65,7 @@ Path:
 
 
 **r-type Instruction Architecture Diagram**
-![image](https://user-images.githubusercontent.com/100239942/168492183-98f9fbb8-d8aa-4353-8a83-7fc8b33f3e96.png)
+![image](https://user-images.githubusercontent.com/100239942/168492374-c112af33-1bcb-44d2-9b0c-5db57d810203.png)
 
 Path:
 
@@ -78,7 +78,7 @@ Path:
 -The ALU result is written into the destination register in the register file.
 
 **j-type Instruction Architecture Diagram**
-![image](https://user-images.githubusercontent.com/100239942/168492189-a31c30d1-6300-4c47-9ece-be55b389c045.png)
+![image](https://user-images.githubusercontent.com/100239942/168492382-b5154c3e-45a1-478c-b354-34fd835b5055.png)
 
 Path:
 
