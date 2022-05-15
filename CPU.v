@@ -8,7 +8,7 @@ module CPU();
     reg [15:0] Rx [15:0];
     reg [2:0] alu_sel;
     reg [3:0] addr, shamt, a, pc;
-    reg en_alu, en_imem, we, oe, clk;
+    reg en_alu, we, oe, clk;
     wire [15:0] bus, ins_bus;
     wire carryFlag;
     wire [3:0] Rn, Rd, Rm, opcode;
@@ -162,7 +162,7 @@ module CPU();
 
     initial begin
         clk = 0;
-        {we, oe, en_alu, addr, a, en_imem, zero} <= 0;
+        {we, oe, en_alu, addr, a, zero} <= 0;
         for(i = 0; i < 16; i = i+1) begin
             Rx[i] = 0;
         end
