@@ -28,13 +28,6 @@ For the Instruction Set Architecture, we implemented 16 operations, as can be se
 |J |opcode |Register with Addr | 
 
 
-
--R type: opcode(4) Rd Rn Rm
-
--I type: opcode(4) Rd Rn Imm
-
--D type: opcode(4) addr Rd xxxx
-
 The CPU implementation can be seen in [cpu.v](https://github.com/Halil-T/16-bit-SingleCycle-CPU/blob/7779641274b5e8eaa3eaa08e5288f92c1515c414/CPU.v). The system clock is implemented in the cpu file. The CPU passes control signals to the appropriate modules of the computer, in this case mostly to the ALU. 
 
 The ALU accepts and outputs 16 bit data, and processes the operations to add and subtract, as well as logicaAl and, or, nor, xor, nand, and lsl, as can be seen in [alu.v](https://github.com/Halil-T/16-bit-SingleCycle-CPU/blob/8a1f315729565a28dbdfaa9c44180b4b2302795d/alu.v).
