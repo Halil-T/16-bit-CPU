@@ -24,6 +24,18 @@
 
 -Darren Chau ()
 
+**Datapath**
+
+-Halil Turan ()
+
+-Darren Chau ()
+
+**Controller**
+
+-Halil Turan ()
+
+-Darren Chau ()
+
 # **Project Report**
 
 -Halil Turan ()
