@@ -49,7 +49,7 @@ The Buffer module in [buffer.v](https://github.com/Halil-T/16-bit-SingleCycle-CP
 
 
 **i-type Instruction Architecture Diagram**
-![image](https://user-images.githubusercontent.com/100239942/168405058-5b7b6990-ce6e-47ab-bfb2-50241f3ff7df.png)
+![image](https://user-images.githubusercontent.com/100239942/168458020-64b478cf-a33e-40e7-944a-a9abba8a773c.png)
 
 Path:
 
@@ -65,7 +65,7 @@ Path:
 
 
 **r-type Instruction Architecture Diagram**
-![image](https://user-images.githubusercontent.com/100239942/168411315-a5a12db8-cdbc-4126-9306-f0ae6e38b80b.png)
+![image](https://user-images.githubusercontent.com/100239942/168458045-e79f57fe-8317-4415-b4bd-c390e727d3c8.png)
 
 Path:
 
@@ -78,7 +78,7 @@ Path:
 -The ALU result is written into the destination register in the register file.
 
 **j-type Instruction Architecture Diagram**
-![image](https://user-images.githubusercontent.com/100239942/168411828-e0c01868-7aff-437c-ac12-8857d19c8b97.png)
+![image](https://user-images.githubusercontent.com/100239942/168458773-bb08f206-a916-4de7-8f6b-2063e3c613c9.png)
 
 Path:
 
