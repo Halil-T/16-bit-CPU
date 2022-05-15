@@ -45,7 +45,7 @@ The Buffer module in [buffer.v](https://github.com/Halil-T/16-bit-SingleCycle-CP
 |16 |bits for instruction|
 
 
-**Put Timing Diagrams Here**
+**Timing Diagrams**
 
 
 **i-type Instruction Architecture Diagram**
