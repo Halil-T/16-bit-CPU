@@ -6,6 +6,11 @@ For this project, we decided to implement a 16-bit single cycle CPU.
 
 For the Instruction Set Architecture, we implemented 16 operations, as can be seen in the [operations file](https://github.com/Halil-T/16-bit-SingleCycle-CPU/blob/2bded82533e591941ee77c3c91d5781174cde95a/operations)
 
+To run the cpu, first input "$ iverilog -o cpu alu.v buffer.v RAM.v imem.v CPU.v"
+Then run "$ vvp cpu"
+
+To make run your own code in the cpu, create a text file with 32 lines where the instruction is stored in hex. Then in [imem.v](https://github.com/Halil-T/16-bit-SingleCycle-CPU/blob/main/imem.v) change the name of the .txt file to the one you would like to run. Then proceed with the instructions above.
+
 **Instruction Types**
 
 |r-type|i-type|d-type|j-type|
